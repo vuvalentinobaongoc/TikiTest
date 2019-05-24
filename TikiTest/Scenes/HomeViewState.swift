@@ -18,7 +18,7 @@ struct HomeViewState: BaseViewState,Copy{
         self.keywords = []
     }
     
-    enum HomeAction {
+    enum HomeAction:Equatable {
         case idle
         case loading
         case loaded

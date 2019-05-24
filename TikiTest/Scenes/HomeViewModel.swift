@@ -46,7 +46,7 @@ class HomeViewModel: BaseViewModel<HomeIntent, HomeResult, HomeViewState> {
 }
 
 extension HomeViewModel {
-    private func getKeyWordsResult() -> Observable<HomeResult> {
+    func getKeyWordsResult() -> Observable<HomeResult> {
         return getHomeKeywordsUseCase.execute(parram: GetHomeKeywordsUsecaseParrams()).map { reponse -> HomeResult in
             HomeResult.loaded(entity: reponse.keywordsEntity)
             }.catchError({ error -> Observable<HomeResult> in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F43DCDC5430B4D6C1A946D2 /* Pods_TikiTest_TikiTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7672122636B1FF1FC61A43 /* Pods_TikiTest_TikiTestTests.framework */; };
 		8D084A03229745E3005561D0 /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A02229745E3005561D0 /* UIPaddingLabel.swift */; };
 		8D084A05229746F2005561D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A04229746F2005561D0 /* UIView.swift */; };
 		8D084A072297B1F1005561D0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A062297B1F1005561D0 /* UIImageView.swift */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		26B1BCDD2565094547361534 /* Pods-TikiTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest.debug.xcconfig"; path = "Target Support Files/Pods-TikiTest/Pods-TikiTest.debug.xcconfig"; sourceTree = "<group>"; };
+		2A7672122636B1FF1FC61A43 /* Pods_TikiTest_TikiTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiTest_TikiTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FEB6AE4C75408C52AD0F99 /* Pods-TikiTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest.release.xcconfig"; path = "Target Support Files/Pods-TikiTest/Pods-TikiTest.release.xcconfig"; sourceTree = "<group>"; };
 		8D084A02229745E3005561D0 /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		8D084A04229746F2005561D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,8 @@
 		8D6973A22296D8F40009E519 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8D6973A42296DB6E0009E519 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8D6973A82296EC670009E519 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		94D158B3ED38D46FF661F0E4 /* Pods-TikiTest-TikiTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest-TikiTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TikiTest-TikiTestTests/Pods-TikiTest-TikiTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAC2E492EB8D2E8AD5196314 /* Pods-TikiTest-TikiTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest-TikiTestTests.release.xcconfig"; path = "Target Support Files/Pods-TikiTest-TikiTestTests/Pods-TikiTest-TikiTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5681E01ACD09A80B0126B14 /* Pods_TikiTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F43DCDC5430B4D6C1A946D2 /* Pods_TikiTest_TikiTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D5681E01ACD09A80B0126B14 /* Pods_TikiTest.framework */,
+				2A7672122636B1FF1FC61A43 /* Pods_TikiTest_TikiTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -450,6 +456,8 @@
 			children = (
 				26B1BCDD2565094547361534 /* Pods-TikiTest.debug.xcconfig */,
 				73FEB6AE4C75408C52AD0F99 /* Pods-TikiTest.release.xcconfig */,
+				94D158B3ED38D46FF661F0E4 /* Pods-TikiTest-TikiTestTests.debug.xcconfig */,
+				AAC2E492EB8D2E8AD5196314 /* Pods-TikiTest-TikiTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -480,9 +488,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D69732F229519B20009E519 /* Build configuration list for PBXNativeTarget "TikiTestTests" */;
 			buildPhases = (
+				318FEF5F5F47B233CD3FF497 /* [CP] Check Pods Manifest.lock */,
 				8D697314229519B20009E519 /* Sources */,
 				8D697315229519B20009E519 /* Frameworks */,
 				8D697316229519B20009E519 /* Resources */,
+				DE2BD882342F898AAC3FF6F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -606,6 +616,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		318FEF5F5F47B233CD3FF497 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikiTest-TikiTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D7454A9EA602740E0A4EBD61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +670,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikiTest/Pods-TikiTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2BD882342F898AAC3FF6F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikiTest-TikiTestTests/Pods-TikiTest-TikiTestTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikiTest-TikiTestTests/Pods-TikiTest-TikiTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -893,10 +967,12 @@
 		};
 		8D697330229519B20009E519 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94D158B3ED38D46FF661F0E4 /* Pods-TikiTest-TikiTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXRYK7VGBQ;
 				INFOPLIST_FILE = TikiTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -905,7 +981,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nicolas.TikiTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiTest.app/TikiTest";
 			};
@@ -913,10 +989,12 @@
 		};
 		8D697331229519B20009E519 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC2E492EB8D2E8AD5196314 /* Pods-TikiTest-TikiTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KXRYK7VGBQ;
 				INFOPLIST_FILE = TikiTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,7 +1003,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nicolas.TikiTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TikiTest.app/TikiTest";
 			};

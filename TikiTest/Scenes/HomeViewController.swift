@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewState,HomeViewModel> {
     
@@ -20,10 +21,10 @@ class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewSta
     }()
     
     @IBOutlet weak var collectionViewKeywords: UICollectionView!
-    
     private var clvKeywords: HomeKeywordCollectionView {
         return collectionViewKeywords as! HomeKeywordCollectionView
     }
+    private let bag = DisposeBag()
     
     override func loadView() {
         super.loadView()
@@ -34,6 +35,11 @@ class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewSta
             loadingIndicator.widthAnchor.constraint(equalToConstant: 100.0),
             loadingIndicator.heightAnchor.constraint(equalToConstant: 100.0)
             ])
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configOutput()
     }
     
     override func intents() -> Observable<HomeIntent> {
@@ -51,6 +57,12 @@ class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewSta
         case .error:
             renderError(state: state)
         }
+    }
+    
+    private func configOutput() {
+        clvKeywords.rx.itemSelected.subscribe(onNext: { indexpath in
+            print("Selected \(indexpath)")
+        }).disposed(by: bag)
     }
 }
 

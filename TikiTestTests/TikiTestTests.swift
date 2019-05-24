@@ -7,28 +7,35 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+import RxSwift
+import RxTest
+import RxBlocking
+
 @testable import TikiTest
 
-class TikiTestTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class TikiTestTests: QuickSpec {
+    
+    override func spec() {
+        
+        describe("pinyin entries already loading") {
+            
+            let viewModel = HomeViewModel.newInstance(getHomeKeywordsUseCase: GetHomeKeywordsUsecase.newInstance())
+            let scheduler = TestScheduler(initialClock: 0)
+            let results = scheduler.createObserver(HomeViewState.self)
+            
+            let _ = viewModel.states().subscribe(results)
+            viewModel.processIntents(intents: Observable.just(HomeIntent.initialize))
+            scheduler.start()
+            
+            it("should show loading") {
+                expect(results.events[0].value.element?.action).to(equal(HomeViewState.HomeAction.idle))
+                expect(results.events[1].value.element?.action).to(equal(HomeViewState.HomeAction.loading))
+            }
         }
     }
-
 }
+
+
+

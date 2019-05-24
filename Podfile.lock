@@ -2,45 +2,63 @@ PODS:
   - Alamofire (4.8.2)
   - Gloss (2.1.1)
   - Kingfisher (5.5.0)
+  - Nimble (8.0.1)
+  - Quick (2.1.0)
   - RxAlamofire (5.0.0):
     - RxAlamofire/Core (= 5.0.0)
   - RxAlamofire/Core (5.0.0):
     - Alamofire (~> 4.8)
     - RxSwift (~> 5.0)
+  - RxBlocking (5.0.0):
+    - RxSwift (~> 5)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
+  - RxTest (5.0.0):
+    - RxSwift (~> 5)
 
 DEPENDENCIES:
   - Alamofire
   - Gloss
   - Kingfisher
+  - Nimble
+  - Quick
   - RxAlamofire
+  - RxBlocking
   - RxCocoa
   - RxSwift
+  - RxTest
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Gloss
     - Kingfisher
+    - Nimble
+    - Quick
     - RxAlamofire
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Gloss: 9df15229b2f6484c14752a738474fd2528b4c5cd
   Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
+  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
 
-PODFILE CHECKSUM: 8c7ba8954a23335a5d445557b48ceb7f5d629fbb
+PODFILE CHECKSUM: 5068aa14e13e0eb9b7cec664a84726b133482e4e
 
 COCOAPODS: 1.6.1
