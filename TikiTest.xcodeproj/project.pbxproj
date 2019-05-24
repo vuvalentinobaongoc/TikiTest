@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D084A03229745E3005561D0 /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A02229745E3005561D0 /* UIPaddingLabel.swift */; };
+		8D084A05229746F2005561D0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A04229746F2005561D0 /* UIView.swift */; };
+		8D084A072297B1F1005561D0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D084A062297B1F1005561D0 /* UIImageView.swift */; };
 		8D697308229519B00009E519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D697307229519B00009E519 /* AppDelegate.swift */; };
 		8D69730F229519B20009E519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D69730E229519B20009E519 /* Assets.xcassets */; };
 		8D697312229519B20009E519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D697310229519B20009E519 /* LaunchScreen.storyboard */; };
@@ -54,7 +57,6 @@
 		8D6973A32296D8F40009E519 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6973A22296D8F40009E519 /* UIColor.swift */; };
 		8D6973A52296DB6E0009E519 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6973A42296DB6E0009E519 /* Collection.swift */; };
 		8D6973A92296EC670009E519 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6973A82296EC670009E519 /* String.swift */; };
-		8D6973AC2296F0580009E519 /* LeftLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6973AB2296F0580009E519 /* LeftLayout.swift */; };
 		A6B5BCCD3E165744E96825E0 /* Pods_TikiTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5681E01ACD09A80B0126B14 /* Pods_TikiTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,9 @@
 /* Begin PBXFileReference section */
 		26B1BCDD2565094547361534 /* Pods-TikiTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest.debug.xcconfig"; path = "Target Support Files/Pods-TikiTest/Pods-TikiTest.debug.xcconfig"; sourceTree = "<group>"; };
 		73FEB6AE4C75408C52AD0F99 /* Pods-TikiTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikiTest.release.xcconfig"; path = "Target Support Files/Pods-TikiTest/Pods-TikiTest.release.xcconfig"; sourceTree = "<group>"; };
+		8D084A02229745E3005561D0 /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
+		8D084A04229746F2005561D0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8D084A062297B1F1005561D0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		8D697304229519B00009E519 /* TikiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D697307229519B00009E519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D69730E229519B20009E519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +136,6 @@
 		8D6973A22296D8F40009E519 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8D6973A42296DB6E0009E519 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8D6973A82296EC670009E519 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		8D6973AB2296F0580009E519 /* LeftLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftLayout.swift; sourceTree = "<group>"; };
 		D5681E01ACD09A80B0126B14 /* Pods_TikiTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikiTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +239,8 @@
 				8D6973A22296D8F40009E519 /* UIColor.swift */,
 				8D6973A42296DB6E0009E519 /* Collection.swift */,
 				8D6973A82296EC670009E519 /* String.swift */,
+				8D084A04229746F2005561D0 /* UIView.swift */,
+				8D084A062297B1F1005561D0 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -434,7 +440,7 @@
 		8D6973AA2296F0480009E519 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				8D6973AB2296F0580009E519 /* LeftLayout.swift */,
+				8D084A02229745E3005561D0 /* UIPaddingLabel.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TikiTest/Pods-TikiTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
@@ -622,6 +629,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
@@ -661,20 +669,22 @@
 				8D6973A12296D4A00009E519 /* UICollectionView.swift in Sources */,
 				8D69733C22951AC80009E519 /* HomeViewModel.swift in Sources */,
 				8D697384229537D80009E519 /* HomeDataStoreFactory.swift in Sources */,
+				8D084A03229745E3005561D0 /* UIPaddingLabel.swift in Sources */,
 				8D697369229531E00009E519 /* MyError.swift in Sources */,
 				8D6973A32296D8F40009E519 /* UIColor.swift in Sources */,
 				8D697379229534B80009E519 /* HomeDataRemote.swift in Sources */,
 				8D697373229534810009E519 /* HomeRemote.swift in Sources */,
 				8D69734322951B650009E519 /* BaseViewState.swift in Sources */,
+				8D084A072297B1F1005561D0 /* UIImageView.swift in Sources */,
 				8D697366229531A90009E519 /* Reactive.swift in Sources */,
 				8D69738A229539BA0009E519 /* HomeProvider.swift in Sources */,
 				8D69734722951B7D0009E519 /* BaseViewController.swift in Sources */,
 				8D69739522954AED0009E519 /* HomeKeywordCollectionView.swift in Sources */,
 				8D6973822295379C0009E519 /* HomeCacheDataStore.swift in Sources */,
-				8D6973AC2296F0580009E519 /* LeftLayout.swift in Sources */,
 				8D6973A52296DB6E0009E519 /* Collection.swift in Sources */,
 				8D6973752295348C0009E519 /* HomeCache.swift in Sources */,
 				8D69733A22951ABE0009E519 /* HomeViewController.swift in Sources */,
+				8D084A05229746F2005561D0 /* UIView.swift in Sources */,
 				8D697370229532FC0009E519 /* HomeKeyWordApiModel.swift in Sources */,
 				8D69737C2295354A0009E519 /* HomeKeywordsEntity.swift in Sources */,
 				8D69736E229532D30009E519 /* HomeApiRequestModel.swift in Sources */,
@@ -778,7 +788,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -833,7 +843,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -857,7 +867,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nicolas.TikiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -876,7 +886,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Nicolas.TikiTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

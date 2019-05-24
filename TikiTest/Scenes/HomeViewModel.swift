@@ -35,7 +35,6 @@ class HomeViewModel: BaseViewModel<HomeIntent, HomeResult, HomeViewState> {
             return previousState.copy(copy: { state in
                 state.action = .loaded
                 state.keywords = handleLoadedState(entity: entity)
-                
             })
         case .loading:
             return previousState.copy(copy: { state in
@@ -44,7 +43,6 @@ class HomeViewModel: BaseViewModel<HomeIntent, HomeResult, HomeViewState> {
             
         }
     }
-    
 }
 
 extension HomeViewModel {
@@ -59,9 +57,10 @@ extension HomeViewModel {
     private func handleLoadedState(entity: [HomeKeywordEntity]) -> [HomeKeywordUIModel] {
         return entity.enumerated().map{
             let colorIndex = keywordsBackgroundColor[exist: $0.offset] == nil ? ($0.offset % keywordsBackgroundColor.count ) : $0.offset
-            return HomeKeywordUIModel(keyword: $0.element.keyword, url: $0.element.icon, backgroundColor: keywordsBackgroundColor[colorIndex])
+            return HomeKeywordUIModel(keyword: $0.element.keyword.splitSentenceToModel(), url: $0.element.icon, backgroundColor: keywordsBackgroundColor[colorIndex])
         }
     }
+    
 }
 
 extension HomeViewModel {

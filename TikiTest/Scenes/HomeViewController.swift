@@ -19,8 +19,11 @@ class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewSta
         return ld
     }()
     
-    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var collectionViewKeywords: HomeCollectionView!
+    @IBOutlet weak var collectionViewKeywords: UICollectionView!
+    
+    private var clvKeywords: HomeKeywordCollectionView {
+        return collectionViewKeywords as! HomeKeywordCollectionView
+    }
     
     override func loadView() {
         super.loadView()
@@ -31,16 +34,6 @@ class HomeViewController: BaseViewController<HomeIntent, HomeResult, HomeViewSta
             loadingIndicator.widthAnchor.constraint(equalToConstant: 100.0),
             loadingIndicator.heightAnchor.constraint(equalToConstant: 100.0)
             ])
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionViewKeywords.backgroundColor = UIColor.black
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionViewHeightConstraint.constant = collectionViewKeywords.collectionViewLayout.collectionViewContentSize.height
     }
     
     override func intents() -> Observable<HomeIntent> {
@@ -69,8 +62,7 @@ extension HomeViewController {
     
     private func renderLoaded(state: HomeViewState) {
         loadingIndicator.stopAnimating()
-        collectionViewKeywords.items = state.keywords
-        
+        clvKeywords.populate(items: state.keywords)
     }
     
     private func renderError(state: HomeViewState) {

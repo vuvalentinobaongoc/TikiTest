@@ -13,25 +13,18 @@ protocol IpaCellModel {
     
 }
 
-protocol BaseCollectionViewDelegate: class {
-    func collectionView(collectionView: UICollectionView, contentSizeDidChanged size: CGSize)
-}
-
 class BaseCollectionView<C: UICollectionViewCell, M: IpaCellModel>: UICollectionView, UICollectionViewDataSource {
-    weak var layoutDelegate : BaseCollectionViewDelegate?
     private var datas = [M]()
-    
-//    open override var contentSize: CGSize {
-//        didSet {
-//            self.layoutDelegate?.collectionView(collectionView: self, contentSizeDidChanged: self.collectionViewLayout.collectionViewContentSize)
-//            invalidateIntrinsicContentSize()
-//        }
-//    }
-//    override var intrinsicContentSize: CGSize {
-//        get {
-//            return collectionViewLayout.collectionViewContentSize
-//        }
-//    }
+   
+    override var contentSize: CGSize {
+        didSet {
+            invalidateIntrinsicContentSize()
+        }
+    }
+
+    override var intrinsicContentSize: CGSize {
+        return contentSize
+    }
     
     func populate(items: [M]) {
         self.datas.removeAll()

@@ -9,4 +9,5 @@ target 'TikiTest' do
   pod 'Alamofire'
   pod 'RxAlamofire'
   pod 'Gloss'
+  pod 'Kingfisher'
 end

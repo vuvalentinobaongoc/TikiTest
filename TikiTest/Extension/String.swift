@@ -26,4 +26,25 @@ extension String {
         
         return ceil(boundingBox.width)
     }
+    
+    func splitSentenceToModel() -> String {
+        
+        let newArr = components(separatedBy: ["(", ")"])
+        var finalArr = [String]()
+        for (index, value) in newArr.enumerated() {
+            if (index + 1) % 2 == 1 {
+                finalArr.append(contentsOf: value.components(separatedBy: " ").filter { $0 != "" })
+            }
+            else {
+                finalArr.append(value)
+            }
+        }
+        
+        if finalArr.count > 1 {
+            finalArr[(finalArr.count - 1) / 2].append(contentsOf: "\n")
+            return finalArr.joined(separator: " ")
+        } else {
+            return finalArr.joined(separator: " ")
+        }
+    }
 }

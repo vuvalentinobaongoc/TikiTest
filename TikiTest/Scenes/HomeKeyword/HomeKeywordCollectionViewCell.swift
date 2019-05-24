@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeKeywordCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var labelKeyword: UILabel!
+    @IBOutlet weak var labelKeyword: UIPaddingLabel!
     @IBOutlet weak var imageViewKeyword: UIImageView!
     
     var item: HomeKeywordUIModel? {
@@ -21,8 +22,11 @@ class HomeKeywordCollectionViewCell: UICollectionViewCell {
     
     private func updateView() {
         if let item = item {
-            labelKeyword.text = item.keyword
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.alignment = .center
+            labelKeyword.attributedText = NSAttributedString(string: item.keyword, attributes: [NSAttributedString.Key.paragraphStyle : paragraph])
             labelKeyword.layer.backgroundColor = UIColor(rgb: item.backgroundColor).cgColor
+            imageViewKeyword.setBestImage(url: URL(string: item.url)!)
         }
     }
 }

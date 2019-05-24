@@ -24,12 +24,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-z4-lnU" customClass="HomeCollectionView" customModule="TikiTest" customModuleProvider="target">
-                                <rect key="frame" x="16" y="98" width="382" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="lOW-Nh-FBZ"/>
-                                </constraints>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="200" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-z4-lnU" customClass="HomeKeywordCollectionView" customModule="TikiTest" customModuleProvider="target">
+                                <rect key="frame" x="16" y="98" width="382" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M9Q-fd-PJ9">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -59,7 +56,6 @@
                         <viewLayoutGuide key="safeArea" id="See-ku-JBh"/>
                     </view>
                     <connections>
-                        <outlet property="collectionViewHeightConstraint" destination="lOW-Nh-FBZ" id="5g2-LZ-bqr"/>
                         <outlet property="collectionViewKeywords" destination="M0t-z4-lnU" id="g6o-rD-X3D"/>
                     </connections>
                 </viewController>
